@@ -25,3 +25,18 @@ function closemenu(){
 }
 
 let message=document.getElementById('msg')
+
+// see more 
+// see more button toggle
+let seeMoreBtn = document.getElementById("seeMoreBtn");
+let moreProjects = document.querySelector(".more-projects");
+
+seeMoreBtn.addEventListener("click", () => {
+    if (moreProjects.style.display === "none" || moreProjects.style.display === "") {
+        moreProjects.style.display = "grid"; // or "block"
+        seeMoreBtn.innerText = "See Less";
+    } else {
+        moreProjects.style.display = "none";
+        seeMoreBtn.innerText = "See More";
+    }
+});
